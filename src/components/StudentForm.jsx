@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { preprocessInput } from '../utils/preprocess.js';
+import Footer from './Footer.jsx';
 
 const StudentForm = ({ onAnalyze, loading }) => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,11 @@ const StudentForm = ({ onAnalyze, loading }) => {
 
   return (
     <div className="card">
-      <h2 style={{marginBottom: '20px', color: '#555'}}>📊 Enter Your Details</h2>
+        <div className="head">
+          <h1>Performance Analyzer</h1>
+          <p>AI-powered predictions using KNN Classification</p>
+        </div>
+      <h2 style={{marginBottom: '20px', color: '#555'}}> Enter Your Details</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label className="label">Name (Optional)</label>
@@ -62,9 +67,9 @@ const StudentForm = ({ onAnalyze, loading }) => {
             className="select"
             required
           >
-            <option value="low">Low 😴</option>
-            <option value="medium">Medium ⚡</option>
-            <option value="high">High 🔥</option>
+            <option value="low">Low </option>
+            <option value="medium">Medium </option>
+            <option value="high">High </option>
           </select>
         </div>
 
@@ -84,7 +89,7 @@ const StudentForm = ({ onAnalyze, loading }) => {
         </div>
 
         <button type="submit" className="btn" disabled={loading}>
-          {loading ? 'Analyzing...' : '🔮 Generate Prediction'}
+          {loading ? 'Analyzing...' : ' Generate Prediction'}
         </button>
       </form>
     </div>

@@ -20,6 +20,11 @@ body {
   flex-direction: column;
 }
 
+.head{
+  color:black;
+  text-align: center;
+  margin-bottom: 30px;
+}
 .header {
   text-align: center;
   color: white;

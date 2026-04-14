@@ -40,9 +40,9 @@ const AnalyzerPage = () => {
 
   const getPersonalizedPlan = (features, currentPrediction) => {
     const plans = {
-      0: '🔥 Start with 30min daily DSA practice. Focus on consistency first!',
-      1: '⚡ Great progress! Add 1hr daily study + 1 small project monthly.',
-      2: '⭐ Excellent! Mentor others + contribute to open source projects.'
+      0: ' Start with 30min daily DSA practice. Focus on consistency first!',
+      1: ' Great progress! Add 1hr daily study + 1 small project monthly.',
+      2: ' Excellent! Mentor others + contribute to open source projects.'
     };
     return plans[currentPrediction];
   };
@@ -55,10 +55,10 @@ const AnalyzerPage = () => {
 
   return (
     <div className="container">
-      <div className="header">
+      {/* <div className="header">
         <h1>Performance Analyzer</h1>
         <p>AI-powered predictions using KNN Classification</p>
-      </div>
+      </div> */}
 
       <StudentForm onAnalyze={handleAnalyze} loading={loading} />
 
@@ -88,18 +88,18 @@ const AnalyzerPage = () => {
           {/* Personalized Plan */}
           <div style={{marginTop: '25px'}}>
             <div className="prediction-item">
-              <div className="prediction-title">📈 Personalized Study Plan</div>
+              <div className="prediction-title"> Personalized Study Plan</div>
               <div>{getPersonalizedPlan(results.features, results.currentPrediction)}</div>
             </div>
 
             {/* 3 Future Predictions */}
             <div className="prediction-item">
-            <div className="prediction-title">🔮 3 Future Scenarios</div>
+            <div className="prediction-title"> 3 Future Scenarios</div>
             <div style={{display: 'flex', gap: '15px', flexWrap: 'wrap'}}>
                 {[
-                { title: '+10% Study Hours', icon: '📚' },
-                { title: 'HIGH Consistency', icon: '⏰' },
-                { title: 'Strong Skills', icon: '💻' }
+                { title: '+10% Study Hours' },
+                { title: 'HIGH Consistency' },
+                { title: 'Strong Skills' }
                 ].map((scenario, i) => (
                 <div key={i} className="result-card" style={{flex: '1', minWidth: '140px'}}>
                     <div style={{fontSize: '0.9em', color: '#666'}}>
@@ -115,7 +115,7 @@ const AnalyzerPage = () => {
 
             {/* Peer Comparison */}
             <div className="prediction-item">
-              <div className="prediction-title">👥 Peer Comparison</div>
+              <div className="prediction-title"> Peer Comparison</div>
               <div className="peer-comparison">
                 <div className="peer-item">
                   <div className="peer-label">You</div>
@@ -134,7 +134,7 @@ const AnalyzerPage = () => {
 
             {/* Consistency Heatmap */}
             {/* <div className="prediction-item">
-              <div className="prediction-title">📊 Consistency Heatmap (Past Week)</div>
+              <div className="prediction-title"> Consistency Heatmap (Past Week)</div>
               <div className="heatmap">
                 {heatmapData.map((item, i) => (
                   <div 
@@ -154,7 +154,7 @@ const AnalyzerPage = () => {
             style={{marginTop: '20px', background: '#6c757d'}}
             onClick={() => setResults(null)}
           >
-            🔄 New Analysis
+             New Analysis
           </button>
         </div>
       )}

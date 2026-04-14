@@ -13,6 +13,6 @@ export const preprocessInput = (formData) => {
 
 // Convert performance number to label
 export const getPerformanceLabel = (performance) => {
-  const labels = ['Poor 🚫', 'Average ⚡', 'Excellent ⭐'];
+  const labels = ['Poor ', 'Average ', 'Excellent '];
   return labels[performance] || 'Unknown';
 };
