@@ -1,20 +1,23 @@
-import React from "react";
-
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-4 mt-10">
-      <div className="container mx-auto text-center">
-        
-        <h2 className="text-lg font-semibold">Student Perfomace Analyzer</h2>
-        
-        <p className="text-sm mt-2">
-          Helping students analyze performance & improve skills 🚀
-        </p>
-
-        <p className="text-xs mt-3 text-gray-400">
-          © {new Date().getFullYear()} All rights reserved.
-        </p>
-
+    <footer style={{
+      background: 'rgba(255,255,255,0.95)',
+      padding: '20px',
+      textAlign: 'center',
+      marginTop: 'auto',
+      borderTop: '1px solid #eee',
+      color: '#666',
+      fontSize: '14px'
+    }}>
+      <div style={{marginBottom: '10px'}}>
+        <strong> Student Performance Analyzer</strong>
+      </div>
+      <div>
+        Powered by <span style={{color: '#667eea'}}>KNN Machine Learning </span> 
+        | Made with Students
+      </div>
+      <div style={{marginTop: '10px', fontSize: '12px'}}>
+         Performance Prediction
       </div>
     </footer>
   );

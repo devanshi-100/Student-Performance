@@ -60,7 +60,7 @@ const AnalyzerPage = () => {
         <p>AI-powered predictions using KNN Classification</p>
       </div> */}
 
-      <StudentForm onAnalyze={handleAnalyze} loading={loading} />
+      {/* <StudentForm onAnalyze={handleAnalyze} loading={loading} /> */}
 
       {results && (
         <div className="card">

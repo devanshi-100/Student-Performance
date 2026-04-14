@@ -3,8 +3,9 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="container">
+    <div style={{minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
       <AnalyzerPage />
+      <Footer />
     </div>
   )
 }
